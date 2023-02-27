@@ -9,6 +9,8 @@ public class Singleton {
     //private static Object obj = new Object(); // var a = { }
 
     private static Singleton INSTANCE;
+    private int data;
+    private int[] arr = { 1,2,3};
 
     private Singleton() {
 
@@ -23,6 +25,14 @@ public class Singleton {
             }
         }
         return INSTANCE;
+    }
+
+    public int getData() {
+        return this.data;
+    }
+
+    public void setData(int data) {
+        this.data = data;
     }
 
     public void foo() {
